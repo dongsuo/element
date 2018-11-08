@@ -16,7 +16,11 @@ export default {
       startTime: 'Začetni čas',
       endDate: 'Končni datum',
       endTime: 'Končni čas',
-      year: 'Leto',
+      prevYear: 'Prejšnje leto',
+      nextYear: 'Naslednje leto',
+      prevMonth: 'Prejšnji mesec',
+      nextMonth: 'Naslednji mesec',
+      year: '',
       month1: 'Jan',
       month2: 'Feb',
       month3: 'Mar',
@@ -67,7 +71,7 @@ export default {
     },
     pagination: {
       goto: 'Pojdi na',
-      pagesize: '/page',
+      pagesize: '/stran',
       total: 'Skupno {total}',
       pageClassifier: ''
     },
@@ -78,6 +82,7 @@ export default {
       error: 'Nedovoljen vnos'
     },
     upload: {
+      deleteTip: 'press delete to remove', // to be translated
       delete: 'Izbriši',
       preview: 'Predogled',
       continue: 'Nadaljuj'

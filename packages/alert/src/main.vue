@@ -1,9 +1,16 @@
 <template>
   <transition name="el-alert-fade">
-    <div class="el-alert" :class="[ typeClass ]" v-show="visible">
+    <div
+      class="el-alert"
+      :class="[typeClass, center ? 'is-center' : '']"
+      v-show="visible"
+      role="alert"
+    >
       <i class="el-alert__icon" :class="[ iconClass, isBigIcon ]" v-if="showIcon"></i>
       <div class="el-alert__content">
-        <span class="el-alert__title" :class="[ isBoldTitle ]" v-if="title">{{ title }}</span>
+        <span class="el-alert__title" :class="[ isBoldTitle ]" v-if="title || $slots.title">
+          <slot name="title">{{ title }}</slot>
+        </span>
         <slot>
           <p class="el-alert__description" v-if="description">{{ description }}</p>
         </slot>
@@ -15,9 +22,9 @@
 
 <script type="text/babel">
   const TYPE_CLASSES_MAP = {
-    'success': 'el-icon-circle-check',
+    'success': 'el-icon-success',
     'warning': 'el-icon-warning',
-    'error': 'el-icon-circle-cross'
+    'error': 'el-icon-error'
   };
   export default {
     name: 'ElAlert',
@@ -44,10 +51,8 @@
         type: String,
         default: ''
       },
-      showIcon: {
-        type: Boolean,
-        default: false
-      }
+      showIcon: Boolean,
+      center: Boolean
     },
 
     data() {
@@ -69,15 +74,15 @@
       },
 
       iconClass() {
-        return TYPE_CLASSES_MAP[this.type] || 'el-icon-information';
+        return TYPE_CLASSES_MAP[this.type] || 'el-icon-info';
       },
 
       isBigIcon() {
-        return this.description ? 'is-big' : '';
+        return this.description || this.$slots.default ? 'is-big' : '';
       },
 
       isBoldTitle() {
-        return this.description ? 'is-bold' : '';
+        return this.description || this.$slots.default ? 'is-bold' : '';
       }
     }
   };

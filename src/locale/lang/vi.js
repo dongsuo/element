@@ -16,6 +16,10 @@ export default {
       startTime: 'Thời gian bắt đầu',
       endDate: 'Ngày kết thúc',
       endTime: 'Thời gian kết thúc',
+      prevYear: 'Năm trước',
+      nextYear: 'Năm tới',
+      prevMonth: 'Tháng trước',
+      nextMonth: 'Tháng tới',
       year: 'Năm',
       month1: 'Tháng 1',
       month2: 'Tháng 2',
@@ -78,6 +82,7 @@ export default {
       error: 'Dữ liệu không hợp lệ'
     },
     upload: {
+      deleteTip: 'Nhấn xoá để xoá',
       delete: 'Xóa',
       preview: 'Xem trước',
       continue: 'Tiếp tục'

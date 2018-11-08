@@ -16,6 +16,10 @@ export default {
       startTime: 'Algusaeg',
       endDate: 'Lõpukuupäev',
       endTime: 'Lõpuaeg',
+      prevYear: 'Eelmine aasta',
+      nextYear: 'Järgmine aasta',
+      prevMonth: 'Eelmine kuu',
+      nextMonth: 'Järgmine kuu',
       year: '',
       month1: 'Jaanuar',
       month2: 'Veebruar',
@@ -78,6 +82,7 @@ export default {
       error: 'Vigane sisend'
     },
     upload: {
+      deleteTip: 'Vajuta kustuta et eemaldada',
       delete: 'Kustuta',
       preview: 'Eelvaate',
       continue: 'Jätka'

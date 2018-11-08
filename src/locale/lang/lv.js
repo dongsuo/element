@@ -16,6 +16,10 @@ export default {
       startTime: 'Sākuma laiks',
       endDate: 'Beigu datums',
       endTime: 'Beigu laiks',
+      prevYear: 'Iepriekšējais gads',
+      nextYear: 'Nākamais gads',
+      prevMonth: 'Iepriekšējais mēnesis',
+      nextMonth: 'Nākamais mēnesis',
       year: '',
       month1: 'Janvāris',
       month2: 'Februāris',
@@ -67,7 +71,7 @@ export default {
     },
     pagination: {
       goto: 'Iet uz',
-      pagesize: '/page',
+      pagesize: '/lapa',
       total: 'Kopā {total}',
       pageClassifier: ''
     },
@@ -78,6 +82,7 @@ export default {
       error: 'Nederīga ievade'
     },
     upload: {
+      deleteTip: 'Nospiediet dzēst lai izņemtu',
       delete: 'Dzēst',
       preview: 'Priekšskatīt',
       continue: 'Turpināt'
@@ -85,7 +90,7 @@ export default {
     table: {
       emptyText: 'Nav datu',
       confirmFilter: 'Apstiprināt',
-      resetFilter: 'Reset',
+      resetFilter: 'Atiestatīt',
       clearFilter: 'Visi',
       sumText: 'Summa'
     },
